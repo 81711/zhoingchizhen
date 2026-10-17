@@ -16,8 +16,7 @@ app.get('/', (req, res) => {
 });
 
 // 从环境变量读取火山方舟凭证
-const API_KEY = process.env.API_KEY;
-const ENDPOINT_ID = process.env.ENDPOINT_ID;
+const API_KEY = process.env.ARK_API_KEY;
 
 app.post('/chat', async (req, res) => {
     try {
@@ -25,7 +24,7 @@ app.post('/chat', async (req, res) => {
         const url = `https://ark.cn-beijing.volces.com/api/v3/chat/completions`;
         const result = await axios.post(url,
             {
-                endpoint_id: ENDPOINT_ID,
+                model: "doubao-seedance-2-5-260628",
                 messages: messages,
                 temperature: 0.7,
                 max_tokens: 512
