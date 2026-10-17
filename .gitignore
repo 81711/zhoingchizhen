@@ -1,0 +1,11 @@
+# 依赖包，很大，不要上传
+node_modules
+
+# 环境变量（里面存密钥，绝对不能上传github）
+.env
+
+# 日志文件
+npm-debug.log
+
+# IDEA配置文件（可选，不加也没事）
+.idea
